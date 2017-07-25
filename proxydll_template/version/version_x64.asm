@@ -2,124 +2,100 @@
 
 extern resolve_export_proc : proc
 
-GetFileVersionInfoA proc
-    push rcx
-    xor rcx, rcx
+seg_resolve_export_proc proc
     call resolve_export_proc
     pop rcx
     jmp proc ptr rax
+seg_resolve_export_proc endp
+
+GetFileVersionInfoA proc
+    push rcx
+    xor rcx, rcx
+    jmp seg_resolve_export_proc
 GetFileVersionInfoA endp
 
 GetFileVersionInfoByHandle proc
     push rcx
     mov rcx, 1
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 GetFileVersionInfoByHandle endp
 
 GetFileVersionInfoExW proc
     push rcx
     mov rcx, 2
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 GetFileVersionInfoExW endp
 
 GetFileVersionInfoSizeA proc
     push rcx
     mov rcx, 3
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 GetFileVersionInfoSizeA endp
 
 GetFileVersionInfoSizeExW proc
     push rcx
     mov rcx, 4
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 GetFileVersionInfoSizeExW endp
 
 GetFileVersionInfoSizeW proc
     push rcx
     mov rcx, 5
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 GetFileVersionInfoSizeW endp
 
 GetFileVersionInfoW proc
     push rcx
     mov rcx, 6
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 GetFileVersionInfoW endp
 
 VerFindFileA proc
     push rcx
     mov rcx, 7
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerFindFileA endp
 
 VerFindFileW proc
     push rcx
     mov rcx, 8
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerFindFileW endp
 
 VerInstallFileA proc
     push rcx
     mov rcx, 9
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerInstallFileA endp
 
 VerInstallFileW proc
     push rcx
     mov rcx, 10
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerInstallFileW endp
 
 VerLanguageNameA proc
     push rcx
     mov rcx, 11
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerLanguageNameA endp
 
 VerLanguageNameW proc
     push rcx
     mov rcx, 12
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerLanguageNameW endp
 
 VerQueryValueA proc
     push rcx
     mov rcx, 13
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerQueryValueA endp
 
 VerQueryValueW proc
     push rcx
     mov rcx, 14
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    jmp seg_resolve_export_proc
 VerQueryValueW endp
 
 end
