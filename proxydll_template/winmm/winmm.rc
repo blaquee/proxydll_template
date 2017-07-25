@@ -1,0 +1,26 @@
+1 VERSIONINFO
+FILEVERSION 6, 1, 7601, 23403
+PRODUCTVERSION 6, 1, 7601, 23403
+FILEOS 0x40004
+FILETYPE 0x2
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904B0"
+        {
+            VALUE "CompanyName", "Microsoft Corporation"
+                VALUE "FileDescription", "MCI API DLL"
+                VALUE "FileVersion", "6.1.7601.23403 (win7sp1_ldr.160325-0600)"
+                VALUE "InternalName", "winmm.dll"
+                VALUE "LegalCopyright", "© Microsoft Corporation. All rights reserved."
+                VALUE "OriginalFilename", "WINMM.DLL"
+                VALUE "ProductName", "Microsoft® Windows® Operating System"
+                VALUE "ProductVersion", "6.1.7601.23403"
+        }
+    }
+
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0409 0x04B0
+    }
+}
