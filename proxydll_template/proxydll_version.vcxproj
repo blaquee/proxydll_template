@@ -136,8 +136,6 @@
       <AdditionalDependencies>Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
     </Link>
-    <MASM />
-    <MASM />
     <MASM>
       <AdditionalOptions>/safeseh %(AdditionalOptions)</AdditionalOptions>
     </MASM>
@@ -156,8 +154,6 @@
       <AdditionalDependencies>Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
     </Link>
-    <MASM />
-    <MASM />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -178,11 +174,6 @@
       <AdditionalDependencies>Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
     </Link>
-    <MASM />
-    <MASM />
-    <PostBuildEvent>
-      <Command>copy /Y "$(TargetPath)" "$(ProgramFiles)\NCWest\NCLauncher\"</Command>
-    </PostBuildEvent>
     <MASM>
       <AdditionalOptions>/safeseh %(AdditionalOptions)</AdditionalOptions>
     </MASM>
@@ -206,8 +197,6 @@
       <AdditionalDependencies>Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
     </Link>
-    <MASM />
-    <MASM />
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
