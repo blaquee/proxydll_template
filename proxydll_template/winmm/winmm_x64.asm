@@ -2,1096 +2,1452 @@
 
 extern resolve_export_proc : proc
 
-seg_resolve_export_proc proc
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
-seg_resolve_export_proc endp
-
 CloseDriver proc
     push rcx
     xor rcx, rcx
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 CloseDriver endp
 
 DefDriverProc proc
     push rcx
     mov rcx, 1
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 DefDriverProc endp
 
 DriverCallback proc
     push rcx
     mov rcx, 2
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 DriverCallback endp
 
 DrvGetModuleHandle proc
     push rcx
     mov rcx, 3
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 DrvGetModuleHandle endp
 
 GetDriverModuleHandle proc
     push rcx
     mov rcx, 4
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 GetDriverModuleHandle endp
 
 OpenDriver proc
     push rcx
     mov rcx, 5
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 OpenDriver endp
 
 PlaySound proc
     push rcx
     mov rcx, 6
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 PlaySound endp
 
 PlaySoundA proc
     push rcx
     mov rcx, 7
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 PlaySoundA endp
 
 PlaySoundW proc
     push rcx
     mov rcx, 8
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 PlaySoundW endp
 
 SendDriverMessage proc
     push rcx
     mov rcx, 9
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 SendDriverMessage endp
 
 WOWAppExit proc
     push rcx
     mov rcx, 10
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 WOWAppExit endp
 
 auxGetDevCapsA proc
     push rcx
     mov rcx, 11
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 auxGetDevCapsA endp
 
 auxGetDevCapsW proc
     push rcx
     mov rcx, 12
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 auxGetDevCapsW endp
 
 auxGetNumDevs proc
     push rcx
     mov rcx, 13
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 auxGetNumDevs endp
 
 auxGetVolume proc
     push rcx
     mov rcx, 14
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 auxGetVolume endp
 
 auxOutMessage proc
     push rcx
     mov rcx, 15
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 auxOutMessage endp
 
 auxSetVolume proc
     push rcx
     mov rcx, 16
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 auxSetVolume endp
 
 joyConfigChanged proc
     push rcx
     mov rcx, 17
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyConfigChanged endp
 
 joyGetDevCapsA proc
     push rcx
     mov rcx, 18
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyGetDevCapsA endp
 
 joyGetDevCapsW proc
     push rcx
     mov rcx, 19
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyGetDevCapsW endp
 
 joyGetNumDevs proc
     push rcx
     mov rcx, 20
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyGetNumDevs endp
 
 joyGetPos proc
     push rcx
     mov rcx, 21
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyGetPos endp
 
 joyGetPosEx proc
     push rcx
     mov rcx, 22
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyGetPosEx endp
 
 joyGetThreshold proc
     push rcx
     mov rcx, 23
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyGetThreshold endp
 
 joyReleaseCapture proc
     push rcx
     mov rcx, 24
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joyReleaseCapture endp
 
 joySetCapture proc
     push rcx
     mov rcx, 25
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joySetCapture endp
 
 joySetThreshold proc
     push rcx
     mov rcx, 26
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 joySetThreshold endp
 
 mciDriverNotify proc
     push rcx
     mov rcx, 27
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciDriverNotify endp
 
 mciDriverYield proc
     push rcx
     mov rcx, 28
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciDriverYield endp
 
 mciExecute proc
     push rcx
     mov rcx, 29
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciExecute endp
 
 mciFreeCommandResource proc
     push rcx
     mov rcx, 30
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciFreeCommandResource endp
 
 mciGetCreatorTask proc
     push rcx
     mov rcx, 31
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetCreatorTask endp
 
 mciGetDeviceIDA proc
     push rcx
     mov rcx, 32
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetDeviceIDA endp
 
 mciGetDeviceIDFromElementIDA proc
     push rcx
     mov rcx, 33
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetDeviceIDFromElementIDA endp
 
 mciGetDeviceIDFromElementIDW proc
     push rcx
     mov rcx, 34
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetDeviceIDFromElementIDW endp
 
 mciGetDeviceIDW proc
     push rcx
     mov rcx, 35
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetDeviceIDW endp
 
 mciGetDriverData proc
     push rcx
     mov rcx, 36
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetDriverData endp
 
 mciGetErrorStringA proc
     push rcx
     mov rcx, 37
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetErrorStringA endp
 
 mciGetErrorStringW proc
     push rcx
     mov rcx, 38
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetErrorStringW endp
 
 mciGetYieldProc proc
     push rcx
     mov rcx, 39
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciGetYieldProc endp
 
 mciLoadCommandResource proc
     push rcx
     mov rcx, 40
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciLoadCommandResource endp
 
 mciSendCommandA proc
     push rcx
     mov rcx, 41
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciSendCommandA endp
 
 mciSendCommandW proc
     push rcx
     mov rcx, 42
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciSendCommandW endp
 
 mciSendStringA proc
     push rcx
     mov rcx, 43
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciSendStringA endp
 
 mciSendStringW proc
     push rcx
     mov rcx, 44
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciSendStringW endp
 
 mciSetDriverData proc
     push rcx
     mov rcx, 45
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciSetDriverData endp
 
 mciSetYieldProc proc
     push rcx
     mov rcx, 46
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mciSetYieldProc endp
 
 midiConnect proc
     push rcx
     mov rcx, 47
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiConnect endp
 
 midiDisconnect proc
     push rcx
     mov rcx, 48
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiDisconnect endp
 
 midiInAddBuffer proc
     push rcx
     mov rcx, 49
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInAddBuffer endp
 
 midiInClose proc
     push rcx
     mov rcx, 50
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInClose endp
 
 midiInGetDevCapsA proc
     push rcx
     mov rcx, 51
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInGetDevCapsA endp
 
 midiInGetDevCapsW proc
     push rcx
     mov rcx, 52
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInGetDevCapsW endp
 
 midiInGetErrorTextA proc
     push rcx
     mov rcx, 53
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInGetErrorTextA endp
 
 midiInGetErrorTextW proc
     push rcx
     mov rcx, 54
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInGetErrorTextW endp
 
 midiInGetID proc
     push rcx
     mov rcx, 55
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInGetID endp
 
 midiInGetNumDevs proc
     push rcx
     mov rcx, 56
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInGetNumDevs endp
 
 midiInMessage proc
     push rcx
     mov rcx, 57
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInMessage endp
 
 midiInOpen proc
     push rcx
     mov rcx, 58
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInOpen endp
 
 midiInPrepareHeader proc
     push rcx
     mov rcx, 59
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInPrepareHeader endp
 
 midiInReset proc
     push rcx
     mov rcx, 60
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInReset endp
 
 midiInStart proc
     push rcx
     mov rcx, 61
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInStart endp
 
 midiInStop proc
     push rcx
     mov rcx, 62
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInStop endp
 
 midiInUnprepareHeader proc
     push rcx
     mov rcx, 63
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiInUnprepareHeader endp
 
 midiOutCacheDrumPatches proc
     push rcx
     mov rcx, 64
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutCacheDrumPatches endp
 
 midiOutCachePatches proc
     push rcx
     mov rcx, 65
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutCachePatches endp
 
 midiOutClose proc
     push rcx
     mov rcx, 66
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutClose endp
 
 midiOutGetDevCapsA proc
     push rcx
     mov rcx, 67
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutGetDevCapsA endp
 
 midiOutGetDevCapsW proc
     push rcx
     mov rcx, 68
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutGetDevCapsW endp
 
 midiOutGetErrorTextA proc
     push rcx
     mov rcx, 69
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutGetErrorTextA endp
 
 midiOutGetErrorTextW proc
     push rcx
     mov rcx, 70
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutGetErrorTextW endp
 
 midiOutGetID proc
     push rcx
     mov rcx, 71
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutGetID endp
 
 midiOutGetNumDevs proc
     push rcx
     mov rcx, 72
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutGetNumDevs endp
 
 midiOutGetVolume proc
     push rcx
     mov rcx, 73
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutGetVolume endp
 
 midiOutLongMsg proc
     push rcx
     mov rcx, 74
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutLongMsg endp
 
 midiOutMessage proc
     push rcx
     mov rcx, 75
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutMessage endp
 
 midiOutOpen proc
     push rcx
     mov rcx, 76
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutOpen endp
 
 midiOutPrepareHeader proc
     push rcx
     mov rcx, 77
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutPrepareHeader endp
 
 midiOutReset proc
     push rcx
     mov rcx, 78
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutReset endp
 
 midiOutSetVolume proc
     push rcx
     mov rcx, 79
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutSetVolume endp
 
 midiOutShortMsg proc
     push rcx
     mov rcx, 80
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutShortMsg endp
 
 midiOutUnprepareHeader proc
     push rcx
     mov rcx, 81
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiOutUnprepareHeader endp
 
 midiStreamClose proc
     push rcx
     mov rcx, 82
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamClose endp
 
 midiStreamOpen proc
     push rcx
     mov rcx, 83
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamOpen endp
 
 midiStreamOut proc
     push rcx
     mov rcx, 84
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamOut endp
 
 midiStreamPause proc
     push rcx
     mov rcx, 85
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamPause endp
 
 midiStreamPosition proc
     push rcx
     mov rcx, 86
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamPosition endp
 
 midiStreamProperty proc
     push rcx
     mov rcx, 87
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamProperty endp
 
 midiStreamRestart proc
     push rcx
     mov rcx, 88
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamRestart endp
 
 midiStreamStop proc
     push rcx
     mov rcx, 89
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 midiStreamStop endp
 
 mixerClose proc
     push rcx
     mov rcx, 90
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerClose endp
 
 mixerGetControlDetailsA proc
     push rcx
     mov rcx, 91
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetControlDetailsA endp
 
 mixerGetControlDetailsW proc
     push rcx
     mov rcx, 92
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetControlDetailsW endp
 
 mixerGetDevCapsA proc
     push rcx
     mov rcx, 93
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetDevCapsA endp
 
 mixerGetDevCapsW proc
     push rcx
     mov rcx, 94
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetDevCapsW endp
 
 mixerGetID proc
     push rcx
     mov rcx, 95
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetID endp
 
 mixerGetLineControlsA proc
     push rcx
     mov rcx, 96
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetLineControlsA endp
 
 mixerGetLineControlsW proc
     push rcx
     mov rcx, 97
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetLineControlsW endp
 
 mixerGetLineInfoA proc
     push rcx
     mov rcx, 98
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetLineInfoA endp
 
 mixerGetLineInfoW proc
     push rcx
     mov rcx, 99
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetLineInfoW endp
 
 mixerGetNumDevs proc
     push rcx
     mov rcx, 100
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerGetNumDevs endp
 
 mixerMessage proc
     push rcx
     mov rcx, 101
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerMessage endp
 
 mixerOpen proc
     push rcx
     mov rcx, 102
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerOpen endp
 
 mixerSetControlDetails proc
     push rcx
     mov rcx, 103
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mixerSetControlDetails endp
 
 mmDrvInstall proc
     push rcx
     mov rcx, 104
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmDrvInstall endp
 
 mmGetCurrentTask proc
     push rcx
     mov rcx, 105
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmGetCurrentTask endp
 
 mmTaskBlock proc
     push rcx
     mov rcx, 106
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmTaskBlock endp
 
 mmTaskCreate proc
     push rcx
     mov rcx, 107
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmTaskCreate endp
 
 mmTaskSignal proc
     push rcx
     mov rcx, 108
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmTaskSignal endp
 
 mmTaskYield proc
     push rcx
     mov rcx, 109
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmTaskYield endp
 
 mmioAdvance proc
     push rcx
     mov rcx, 110
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioAdvance endp
 
 mmioAscend proc
     push rcx
     mov rcx, 111
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioAscend endp
 
 mmioClose proc
     push rcx
     mov rcx, 112
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioClose endp
 
 mmioCreateChunk proc
     push rcx
     mov rcx, 113
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioCreateChunk endp
 
 mmioDescend proc
     push rcx
     mov rcx, 114
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioDescend endp
 
 mmioFlush proc
     push rcx
     mov rcx, 115
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioFlush endp
 
 mmioGetInfo proc
     push rcx
     mov rcx, 116
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioGetInfo endp
 
 mmioInstallIOProcA proc
     push rcx
     mov rcx, 117
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioInstallIOProcA endp
 
 mmioInstallIOProcW proc
     push rcx
     mov rcx, 118
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioInstallIOProcW endp
 
 mmioOpenA proc
     push rcx
     mov rcx, 119
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioOpenA endp
 
 mmioOpenW proc
     push rcx
     mov rcx, 120
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioOpenW endp
 
 mmioRead proc
     push rcx
     mov rcx, 121
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioRead endp
 
 mmioRenameA proc
     push rcx
     mov rcx, 122
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioRenameA endp
 
 mmioRenameW proc
     push rcx
     mov rcx, 123
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioRenameW endp
 
 mmioSeek proc
     push rcx
     mov rcx, 124
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioSeek endp
 
 mmioSendMessage proc
     push rcx
     mov rcx, 125
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioSendMessage endp
 
 mmioSetBuffer proc
     push rcx
     mov rcx, 126
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioSetBuffer endp
 
 mmioSetInfo proc
     push rcx
     mov rcx, 127
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioSetInfo endp
 
 mmioStringToFOURCCA proc
     push rcx
     mov rcx, 128
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioStringToFOURCCA endp
 
 mmioStringToFOURCCW proc
     push rcx
     mov rcx, 129
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioStringToFOURCCW endp
 
 mmioWrite proc
     push rcx
     mov rcx, 130
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmioWrite endp
 
 mmsystemGetVersion proc
     push rcx
     mov rcx, 131
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 mmsystemGetVersion endp
 
 sndPlaySoundA proc
     push rcx
     mov rcx, 132
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 sndPlaySoundA endp
 
 sndPlaySoundW proc
     push rcx
     mov rcx, 133
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 sndPlaySoundW endp
 
 timeBeginPeriod proc
     push rcx
     mov rcx, 134
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 timeBeginPeriod endp
 
 timeEndPeriod proc
     push rcx
     mov rcx, 135
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 timeEndPeriod endp
 
 timeGetDevCaps proc
     push rcx
     mov rcx, 136
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 timeGetDevCaps endp
 
 timeGetSystemTime proc
     push rcx
     mov rcx, 137
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 timeGetSystemTime endp
 
 timeGetTime proc
     push rcx
     mov rcx, 138
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 timeGetTime endp
 
 timeKillEvent proc
     push rcx
     mov rcx, 139
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 timeKillEvent endp
 
 timeSetEvent proc
     push rcx
     mov rcx, 140
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 timeSetEvent endp
 
 waveInAddBuffer proc
     push rcx
     mov rcx, 141
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInAddBuffer endp
 
 waveInClose proc
     push rcx
     mov rcx, 142
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInClose endp
 
 waveInGetDevCapsA proc
     push rcx
     mov rcx, 143
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInGetDevCapsA endp
 
 waveInGetDevCapsW proc
     push rcx
     mov rcx, 144
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInGetDevCapsW endp
 
 waveInGetErrorTextA proc
     push rcx
     mov rcx, 145
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInGetErrorTextA endp
 
 waveInGetErrorTextW proc
     push rcx
     mov rcx, 146
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInGetErrorTextW endp
 
 waveInGetID proc
     push rcx
     mov rcx, 147
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInGetID endp
 
 waveInGetNumDevs proc
     push rcx
     mov rcx, 148
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInGetNumDevs endp
 
 waveInGetPosition proc
     push rcx
     mov rcx, 149
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInGetPosition endp
 
 waveInMessage proc
     push rcx
     mov rcx, 150
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInMessage endp
 
 waveInOpen proc
     push rcx
     mov rcx, 151
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInOpen endp
 
 waveInPrepareHeader proc
     push rcx
     mov rcx, 152
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInPrepareHeader endp
 
 waveInReset proc
     push rcx
     mov rcx, 153
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInReset endp
 
 waveInStart proc
     push rcx
     mov rcx, 154
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInStart endp
 
 waveInStop proc
     push rcx
     mov rcx, 155
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInStop endp
 
 waveInUnprepareHeader proc
     push rcx
     mov rcx, 156
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveInUnprepareHeader endp
 
 waveOutBreakLoop proc
     push rcx
     mov rcx, 157
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutBreakLoop endp
 
 waveOutClose proc
     push rcx
     mov rcx, 158
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutClose endp
 
 waveOutGetDevCapsA proc
     push rcx
     mov rcx, 159
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetDevCapsA endp
 
 waveOutGetDevCapsW proc
     push rcx
     mov rcx, 160
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetDevCapsW endp
 
 waveOutGetErrorTextA proc
     push rcx
     mov rcx, 161
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetErrorTextA endp
 
 waveOutGetErrorTextW proc
     push rcx
     mov rcx, 162
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetErrorTextW endp
 
 waveOutGetID proc
     push rcx
     mov rcx, 163
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetID endp
 
 waveOutGetNumDevs proc
     push rcx
     mov rcx, 164
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetNumDevs endp
 
 waveOutGetPitch proc
     push rcx
     mov rcx, 165
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetPitch endp
 
 waveOutGetPlaybackRate proc
     push rcx
     mov rcx, 166
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetPlaybackRate endp
 
 waveOutGetPosition proc
     push rcx
     mov rcx, 167
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetPosition endp
 
 waveOutGetVolume proc
     push rcx
     mov rcx, 168
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutGetVolume endp
 
 waveOutMessage proc
     push rcx
     mov rcx, 169
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutMessage endp
 
 waveOutOpen proc
     push rcx
     mov rcx, 170
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutOpen endp
 
 waveOutPause proc
     push rcx
     mov rcx, 171
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutPause endp
 
 waveOutPrepareHeader proc
     push rcx
     mov rcx, 172
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutPrepareHeader endp
 
 waveOutReset proc
     push rcx
     mov rcx, 173
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutReset endp
 
 waveOutRestart proc
     push rcx
     mov rcx, 174
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutRestart endp
 
 waveOutSetPitch proc
     push rcx
     mov rcx, 175
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutSetPitch endp
 
 waveOutSetPlaybackRate proc
     push rcx
     mov rcx, 176
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutSetPlaybackRate endp
 
 waveOutSetVolume proc
     push rcx
     mov rcx, 177
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutSetVolume endp
 
 waveOutUnprepareHeader proc
     push rcx
     mov rcx, 178
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutUnprepareHeader endp
 
 waveOutWrite proc
     push rcx
     mov rcx, 179
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 waveOutWrite endp
 
 winmm_2 proc
     push rcx
     mov rcx, 180
-    jmp seg_resolve_export_proc
+    call resolve_export_proc
+    pop rcx
+    jmp proc ptr rax
 winmm_2 endp
 
 end
