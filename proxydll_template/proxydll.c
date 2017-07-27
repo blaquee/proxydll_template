@@ -19,12 +19,12 @@ VOID proxy_dll_init(void) {
 }
 
 FARPROC resolve_export_proc(SIZE_T index) {
-    if (index > EXPORT_COUNT) {
+    if (index > EXPORT_COUNT)
         return NULL;
-    }
-    if (hmod && export_procs[index]) {
+
+    if (hmod && export_procs[index])
         return export_procs[index];
-    }
+
     proxy_dll_init();
     if (hmod) {
         export_procs[index] = GetProcAddress(hmod, export_names[index]);
@@ -34,12 +34,12 @@ FARPROC resolve_export_proc(SIZE_T index) {
 }
 
 BOOL proxy_dll_free(void) {
-    if (!hmod) {
+    if (!hmod)
         return FALSE;
-    }
+
     BOOL result = FreeLibrary(hmod);
-    if (result) {
+    if (result)
         hmod = NULL;
-    }
+
     return result;
 }

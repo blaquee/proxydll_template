@@ -8,9 +8,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DisableThreadLibraryCalls(hModule);
         break;
     case DLL_PROCESS_DETACH:
-        if (lpReserved == NULL) {
+        if (lpReserved == NULL)
             proxy_dll_free();
-        }
         break;
     default:
         break;

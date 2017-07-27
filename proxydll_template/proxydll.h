@@ -1,9 +1,5 @@
 #pragma once
 
-VOID proxy_dll_init(void);
-FARPROC resolve_export_proc(SIZE_T index);
-BOOL proxy_dll_free(void);
-
 #ifdef PROXYDLL_VERSION_EXPORTS
 #define DLL_FNAME "\\version.dll"
 #define EXPORT_COUNT 15
@@ -47,3 +43,7 @@ BOOL proxy_dll_free(void);
     "waveOutMessage", "waveOutOpen", "waveOutPause", "waveOutPrepareHeader", "waveOutReset", "waveOutRestart", \
     "waveOutSetPitch", "waveOutSetPlaybackRate", "waveOutSetVolume", "waveOutUnprepareHeader", "waveOutWrite", "winmm_2"
 #endif
+
+VOID proxy_dll_init(void);
+FARPROC resolve_export_proc(SIZE_T index);
+BOOL proxy_dll_free(void);
