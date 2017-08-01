@@ -2,10 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="dllmain.c" />
-    <ClCompile Include="proxydll.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="proxydll.h" />
+    <ClCompile Include="proxydll.c">
+      <Filter>common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="version\version_x86.asm">
@@ -32,5 +31,10 @@
     <None Include="version\version.def">
       <Filter>version</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="proxydll.h">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
