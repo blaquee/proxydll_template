@@ -1,4 +1,6 @@
 EXPORTS
+	winmm_2 @2 NONAME
+	mciExecute @3
 	CloseDriver @4
 	DefDriverProc @5
 	DriverCallback @6
@@ -28,7 +30,6 @@ EXPORTS
 	joySetThreshold @30
 	mciDriverNotify @31
 	mciDriverYield @32
-	mciExecute @3
 	mciFreeCommandResource @33
 	mciGetCreatorTask @34
 	mciGetDeviceIDA @35
@@ -179,4 +180,3 @@ EXPORTS
 	waveOutSetVolume @180
 	waveOutUnprepareHeader @181
 	waveOutWrite @182
-	winmm_2 @2 NONAME

@@ -41,9 +41,9 @@
     "waveOutBreakLoop", "waveOutClose", "waveOutGetDevCapsA", "waveOutGetDevCapsW", "waveOutGetErrorTextA", "waveOutGetErrorTextW", \
     "waveOutGetID", "waveOutGetNumDevs", "waveOutGetPitch", "waveOutGetPlaybackRate", "waveOutGetPosition", "waveOutGetVolume", \
     "waveOutMessage", "waveOutOpen", "waveOutPause", "waveOutPrepareHeader", "waveOutReset", "waveOutRestart", \
-    "waveOutSetPitch", "waveOutSetPlaybackRate", "waveOutSetVolume", "waveOutUnprepareHeader", "waveOutWrite", "winmm_2"
+    "waveOutSetPitch", "waveOutSetPlaybackRate", "waveOutSetVolume", "waveOutUnprepareHeader", "waveOutWrite", (LPCSTR)(LOWORD(2))
 #endif
 
-VOID proxy_dll_init(void);
+BOOL proxy_dll_init(BOOL b_resolve_all_procs);
 FARPROC resolve_export_proc(SIZE_T index);
 BOOL proxy_dll_free(void);

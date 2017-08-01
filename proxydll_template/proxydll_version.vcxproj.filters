@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.c" />
+    <ClCompile Include="proxydll.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="proxydll.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="version\version_x86.asm">
+      <Filter>version</Filter>
+    </MASM>
+    <MASM Include="version\version_x64.asm">
+      <Filter>version</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{b2460f62-e04e-4320-930f-eb96b4e3a22f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="version">
+      <UniqueIdentifier>{68b32e59-659d-44ff-8d58-64fd842aa3a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="version\version.rc">
+      <Filter>version</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version\version.def">
+      <Filter>version</Filter>
+    </None>
+  </ItemGroup>
+</Project>

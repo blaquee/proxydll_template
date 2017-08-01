@@ -9,13 +9,18 @@ static FARPROC export_procs[EXPORT_COUNT] = { 0 };
 
 static LPCSTR export_names[] = { EXPORT_NAMES };
 
-VOID proxy_dll_init(void) {
+BOOL proxy_dll_init(BOOL b_resolve_all_procs) {
     if (!hmod) {
         TCHAR path[MAX_PATH];
         GetSystemDirectory(path, _countof(path));
         _tcscat_s(path, _countof(path), _T(DLL_FNAME));
         hmod = LoadLibrary(path);
     }
+    if (b_resolve_all_procs) {
+        for (SIZE_T i = 0; i < EXPORT_COUNT; i++)
+            resolve_export_proc(i);
+    }
+    return (hmod != NULL);
 }
 
 FARPROC resolve_export_proc(SIZE_T index) {
@@ -25,11 +30,9 @@ FARPROC resolve_export_proc(SIZE_T index) {
     if (hmod && export_procs[index])
         return export_procs[index];
 
-    proxy_dll_init();
-    if (hmod) {
-        export_procs[index] = GetProcAddress(hmod, export_names[index]);
-        return export_procs[index];
-    }
+    if (proxy_dll_init(FALSE))
+        return export_procs[index] = GetProcAddress(hmod, export_names[index]);
+    
     return NULL;
 }
 
