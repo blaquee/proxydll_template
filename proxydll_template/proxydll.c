@@ -5,9 +5,9 @@
 
 static HMODULE hmod = NULL;
 
-static FARPROC export_procs[EXPORT_COUNT] = { 0 };
-
 static LPCSTR export_names[] = { EXPORT_NAMES };
+
+static FARPROC export_procs[_countof(export_names)] = { 0 };
 
 BOOL proxy_dll_init(BOOL b_resolve_all_procs) {
     if (!hmod) {
@@ -16,15 +16,16 @@ BOOL proxy_dll_init(BOOL b_resolve_all_procs) {
         _tcscat_s(path, _countof(path), _T(DLL_FNAME));
         hmod = LoadLibrary(path);
     }
+
     if (b_resolve_all_procs) {
-        for (SIZE_T i = 0; i < EXPORT_COUNT; i++)
+        for (SIZE_T i = 0; i < _countof(export_names); i++)
             resolve_export_proc(i);
     }
     return (hmod != NULL);
 }
 
 FARPROC resolve_export_proc(SIZE_T index) {
-    if (index > EXPORT_COUNT)
+    if (index > _countof(export_names))
         return NULL;
 
     if (hmod && export_procs[index])

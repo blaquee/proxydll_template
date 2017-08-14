@@ -2,7 +2,6 @@
 
 #ifdef PROXYDLL_VERSION_EXPORTS
 #define DLL_FNAME "\\version.dll"
-#define EXPORT_COUNT 15
 #define EXPORT_NAMES \
     "GetFileVersionInfoA", "GetFileVersionInfoByHandle", "GetFileVersionInfoExW", "GetFileVersionInfoSizeA", "GetFileVersionInfoSizeExW", \
     "GetFileVersionInfoSizeW", "GetFileVersionInfoW", "VerFindFileA", "VerFindFileW", "VerInstallFileA", \
@@ -10,7 +9,6 @@
 #endif
 #ifdef PROXYDLL_WINMM_EXPORTS
 #define DLL_FNAME "\\winmm.dll"
-#define EXPORT_COUNT 181
 #define EXPORT_NAMES \
     "CloseDriver", "DefDriverProc", "DriverCallback", "DrvGetModuleHandle", "GetDriverModuleHandle", "OpenDriver", "PlaySound", \
     "PlaySoundA", "PlaySoundW", "SendDriverMessage", "WOWAppExit", "auxGetDevCapsA", "auxGetDevCapsW", \

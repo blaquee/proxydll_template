@@ -2,8 +2,6 @@
 
 .code
 
-.safeseh SEH_handler
-
 resolve_export_proc proto C arg1:dword
 
 CloseDriver proc
@@ -910,9 +908,5 @@ winmm_2 proc
     invoke resolve_export_proc, 180
     jmp proc ptr eax
 winmm_2 endp
-
-SEH_handler   proc
-    ret
-SEH_handler   endp
 
 end

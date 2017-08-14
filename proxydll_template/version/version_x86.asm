@@ -2,8 +2,6 @@
 
 .code
 
-.safeseh SEH_handler
-
 resolve_export_proc proto C arg1:dword
 
 GetFileVersionInfoA proc
@@ -80,9 +78,5 @@ VerQueryValueW proc
     invoke resolve_export_proc, 14
     jmp proc ptr eax
 VerQueryValueW endp
-
-SEH_handler   proc
-    ret
-SEH_handler   endp
 
 end
