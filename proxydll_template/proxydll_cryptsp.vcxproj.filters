@@ -12,18 +12,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="cryptsp\cryptsp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cryptsp\cryptsp.def" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="proxydll.h">
       <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="version\version.def" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="version\version.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <MASM Include="version\version_x64.asm" />
-    <MASM Include="version\version_x86.asm" />
+    <MASM Include="cryptsp\cryptsp_x64.asm" />
+    <MASM Include="cryptsp\cryptsp_x86.asm" />
   </ItemGroup>
 </Project>

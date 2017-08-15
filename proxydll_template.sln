@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_cryptsp", "proxydll_template\proxydll_cryptsp.vcxproj", "{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_version", "proxydll_template\proxydll_version.vcxproj", "{482F0850-C79D-43EB-909D-8A18CE257986}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_winmm", "proxydll_template\proxydll_winmm.vcxproj", "{233067FD-465A-418B-AB27-1531BB3043AC}"
@@ -15,6 +17,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Debug|x64.ActiveCfg = Debug|x64
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Debug|x64.Build.0 = Debug|x64
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Debug|x86.ActiveCfg = Debug|Win32
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Debug|x86.Build.0 = Debug|Win32
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Release|x64.ActiveCfg = Release|x64
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Release|x64.Build.0 = Release|x64
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Release|x86.ActiveCfg = Release|Win32
+		{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}.Release|x86.Build.0 = Release|Win32
 		{482F0850-C79D-43EB-909D-8A18CE257986}.Debug|x64.ActiveCfg = Debug|x64
 		{482F0850-C79D-43EB-909D-8A18CE257986}.Debug|x64.Build.0 = Debug|x64
 		{482F0850-C79D-43EB-909D-8A18CE257986}.Debug|x86.ActiveCfg = Debug|Win32
@@ -34,5 +44,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCAA1EAA-C194-4B03-83A3-BD416E070D31}
 	EndGlobalSection
 EndGlobal

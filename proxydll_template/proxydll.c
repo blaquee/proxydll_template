@@ -4,9 +4,7 @@
 #include "proxydll.h"
 
 static HMODULE hmod = NULL;
-
 static LPCSTR export_names[] = { EXPORT_NAMES };
-
 static FARPROC export_procs[_countof(export_names)] = { 0 };
 
 BOOL proxy_dll_init(BOOL b_resolve_all_procs) {

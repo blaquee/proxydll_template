@@ -26,26 +26,26 @@
     <ClInclude Include="proxydll.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="version\version.def" />
+    <None Include="cryptsp\cryptsp.def" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="version\version.rc" />
+    <ResourceCompile Include="cryptsp\cryptsp.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="version\version_x64.asm">
+    <MASM Include="cryptsp\cryptsp_x64.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </MASM>
-    <MASM Include="version\version_x86.asm">
+    <MASM Include="cryptsp\cryptsp_x86.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </MASM>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{482F0850-C79D-43EB-909D-8A18CE257986}</ProjectGuid>
+    <ProjectGuid>{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>proxydll_version</RootNamespace>
+    <RootNamespace>proxydll_cryptsp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -98,28 +98,28 @@
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <TargetName>version</TargetName>
+    <TargetName>cryptsp</TargetName>
     <IntDir>$(ProjectDir)$(BaseIntermediateOutputPath)$(ProjectName)\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <TargetName>version</TargetName>
+    <TargetName>cryptsp</TargetName>
     <IntDir>$(ProjectDir)$(BaseIntermediateOutputPath)$(ProjectName)\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <TargetName>version</TargetName>
+    <TargetName>cryptsp</TargetName>
     <IntDir>$(ProjectDir)$(BaseIntermediateOutputPath)$(ProjectName)\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <TargetName>version</TargetName>
+    <TargetName>cryptsp</TargetName>
     <IntDir>$(ProjectDir)$(BaseIntermediateOutputPath)$(ProjectName)\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -128,13 +128,13 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PROXYDLL_VERSION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PROXYDLL_CRYPTSP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>cryptsp\cryptsp.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -143,13 +143,13 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;PROXYDLL_VERSION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;PROXYDLL_CRYPTSP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>cryptsp\cryptsp.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -160,7 +160,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PROXYDLL_VERSION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PROXYDLL_CRYPTSP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -169,7 +169,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>cryptsp\cryptsp.def</ModuleDefinitionFile>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
@@ -181,7 +181,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;PROXYDLL_VERSION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;PROXYDLL_CRYPTSP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -190,7 +190,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>version\version.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>cryptsp\cryptsp.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
