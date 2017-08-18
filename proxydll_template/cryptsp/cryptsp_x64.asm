@@ -2,332 +2,180 @@
 
 extern resolve_export_proc : proc
 
-CheckSignatureInFile proc
+macro_resolve_export_proc macro index
     push rcx
-    xor rcx, rcx
+    IF index EQ 0
+        xor rcx, rcx
+    ELSE
+        mov rcx, index
+    ENDIF
     call resolve_export_proc
     pop rcx
     jmp proc ptr rax
+endm
+
+CheckSignatureInFile proc
+    macro_resolve_export_proc 0
 CheckSignatureInFile endp
 
 CryptAcquireContextA proc
-    push rcx
-    mov rcx, 1
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 1
 CryptAcquireContextA endp
 
 CryptAcquireContextW proc
-    push rcx
-    mov rcx, 2
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 2
 CryptAcquireContextW endp
 
 CryptContextAddRef proc
-    push rcx
-    mov rcx, 3
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 3
 CryptContextAddRef endp
 
 CryptCreateHash proc
-    push rcx
-    mov rcx, 4
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 4
 CryptCreateHash endp
 
 CryptDecrypt proc
-    push rcx
-    mov rcx, 5
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 5
 CryptDecrypt endp
 
 CryptDeriveKey proc
-    push rcx
-    mov rcx, 6
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 6
 CryptDeriveKey endp
 
 CryptDestroyHash proc
-    push rcx
-    mov rcx, 7
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 7
 CryptDestroyHash endp
 
 CryptDestroyKey proc
-    push rcx
-    mov rcx, 8
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 8
 CryptDestroyKey endp
 
 CryptDuplicateHash proc
-    push rcx
-    mov rcx, 9
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 9
 CryptDuplicateHash endp
 
 CryptDuplicateKey proc
-    push rcx
-    mov rcx, 10
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 10
 CryptDuplicateKey endp
 
 CryptEncrypt proc
-    push rcx
-    mov rcx, 11
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 11
 CryptEncrypt endp
 
 CryptEnumProviderTypesA proc
-    push rcx
-    mov rcx, 12
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 12
 CryptEnumProviderTypesA endp
 
 CryptEnumProviderTypesW proc
-    push rcx
-    mov rcx, 13
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 13
 CryptEnumProviderTypesW endp
 
 CryptEnumProvidersA proc
-    push rcx
-    mov rcx, 14
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 14
 CryptEnumProvidersA endp
 
 CryptEnumProvidersW proc
-    push rcx
-    mov rcx, 15
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 15
 CryptEnumProvidersW endp
 
 CryptExportKey proc
-    push rcx
-    mov rcx, 16
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 16
 CryptExportKey endp
 
 CryptGenKey proc
-    push rcx
-    mov rcx, 17
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 17
 CryptGenKey endp
 
 CryptGenRandom proc
-    push rcx
-    mov rcx, 18
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 18
 CryptGenRandom endp
 
 CryptGetDefaultProviderA proc
-    push rcx
-    mov rcx, 19
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 19
 CryptGetDefaultProviderA endp
 
 CryptGetDefaultProviderW proc
-    push rcx
-    mov rcx, 20
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 20
 CryptGetDefaultProviderW endp
 
 CryptGetHashParam proc
-    push rcx
-    mov rcx, 21
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 21
 CryptGetHashParam endp
 
 CryptGetKeyParam proc
-    push rcx
-    mov rcx, 22
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 22
 CryptGetKeyParam endp
 
 CryptGetProvParam proc
-    push rcx
-    mov rcx, 23
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 23
 CryptGetProvParam endp
 
 CryptGetUserKey proc
-    push rcx
-    mov rcx, 24
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 24
 CryptGetUserKey endp
 
 CryptHashData proc
-    push rcx
-    mov rcx, 25
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 25
 CryptHashData endp
 
 CryptHashSessionKey proc
-    push rcx
-    mov rcx, 26
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 26
 CryptHashSessionKey endp
 
 CryptImportKey proc
-    push rcx
-    mov rcx, 27
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 27
 CryptImportKey endp
 
 CryptReleaseContext proc
-    push rcx
-    mov rcx, 28
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 28
 CryptReleaseContext endp
 
 CryptSetHashParam proc
-    push rcx
-    mov rcx, 29
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 29
 CryptSetHashParam endp
 
 CryptSetKeyParam proc
-    push rcx
-    mov rcx, 30
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 30
 CryptSetKeyParam endp
 
 CryptSetProvParam proc
-    push rcx
-    mov rcx, 31
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 31
 CryptSetProvParam endp
 
 CryptSetProviderA proc
-    push rcx
-    mov rcx, 32
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 32
 CryptSetProviderA endp
 
 CryptSetProviderExA proc
-    push rcx
-    mov rcx, 33
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 33
 CryptSetProviderExA endp
 
 CryptSetProviderExW proc
-    push rcx
-    mov rcx, 34
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 34
 CryptSetProviderExW endp
 
 CryptSetProviderW proc
-    push rcx
-    mov rcx, 35
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 35
 CryptSetProviderW endp
 
 CryptSignHashA proc
-    push rcx
-    mov rcx, 36
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 36
 CryptSignHashA endp
 
 CryptSignHashW proc
-    push rcx
-    mov rcx, 37
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 37
 CryptSignHashW endp
 
 CryptVerifySignatureA proc
-    push rcx
-    mov rcx, 38
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 38
 CryptVerifySignatureA endp
 
 CryptVerifySignatureW proc
-    push rcx
-    mov rcx, 39
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 39
 CryptVerifySignatureW endp
 
 SystemFunction035 proc
-    push rcx
-    mov rcx, 40
-    call resolve_export_proc
-    pop rcx
-    jmp proc ptr rax
+    macro_resolve_export_proc 40
 SystemFunction035 endp
 
 end
