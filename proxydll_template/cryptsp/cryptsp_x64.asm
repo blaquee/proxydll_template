@@ -4,11 +4,11 @@ extern resolve_export_proc : proc
 
 macro_resolve_export_proc macro index
     push rcx
-    IF index EQ 0
-        xor rcx, rcx
-    ELSE
-        mov rcx, index
-    ENDIF
+IF index EQ 0
+    xor rcx, rcx
+ELSE
+    mov rcx, index
+ENDIF
     call resolve_export_proc
     pop rcx
     jmp proc ptr rax
