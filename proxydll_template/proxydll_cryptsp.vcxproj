@@ -32,13 +32,9 @@
     <ResourceCompile Include="cryptsp\cryptsp.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="cryptsp\cryptsp_x64.asm">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </MASM>
-    <MASM Include="cryptsp\cryptsp_x86.asm">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    <MASM Include="cryptsp\cryptsp.asm">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">x64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">x64</PreprocessorDefinitions>
     </MASM>
   </ItemGroup>
   <PropertyGroup Label="Globals">

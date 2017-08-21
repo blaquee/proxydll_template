@@ -23,7 +23,6 @@
     <ResourceCompile Include="version\version.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="version\version_x64.asm" />
-    <MASM Include="version\version_x86.asm" />
+    <MASM Include="version\version.asm" />
   </ItemGroup>
 </Project>

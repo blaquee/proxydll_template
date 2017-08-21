@@ -23,7 +23,6 @@
     <None Include="winmm\winmm.def" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="winmm\winmm_x64.asm" />
-    <MASM Include="winmm\winmm_x86.asm" />
+    <MASM Include="winmm\winmm.asm" />
   </ItemGroup>
 </Project>

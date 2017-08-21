@@ -23,7 +23,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="cryptsp\cryptsp_x64.asm" />
-    <MASM Include="cryptsp\cryptsp_x86.asm" />
+    <MASM Include="cryptsp\cryptsp.asm" />
   </ItemGroup>
 </Project>
