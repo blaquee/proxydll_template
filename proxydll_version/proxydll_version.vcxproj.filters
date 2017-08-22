@@ -1,28 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="dllmain.c" />
-    <ClCompile Include="proxydll.c">
+    <ClCompile Include="..\common\dllmain.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\proxydll.c">
       <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="version.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version.def" />
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="common">
-      <UniqueIdentifier>{b2460f62-e04e-4320-930f-eb96b4e3a22f}</UniqueIdentifier>
+      <UniqueIdentifier>{61927976-e711-4ecb-be24-7c765ecccf0f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="proxydll.h">
+    <ClInclude Include="..\common\proxydll.h">
       <Filter>common</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="version\version.def" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="version\version.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <MASM Include="version\version.asm" />
   </ItemGroup>
 </Project>
