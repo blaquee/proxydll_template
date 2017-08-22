@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_cryptsp", "proxydll_template\proxydll_cryptsp.vcxproj", "{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_cryptsp", "proxydll_cryptsp\proxydll_cryptsp.vcxproj", "{BD80F2E3-3EF4-49CC-A97F-4BCD78FEBA25}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_version", "proxydll_template\proxydll_version.vcxproj", "{482F0850-C79D-43EB-909D-8A18CE257986}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_version", "proxydll_version\proxydll_version.vcxproj", "{482F0850-C79D-43EB-909D-8A18CE257986}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_winmm", "proxydll_template\proxydll_winmm.vcxproj", "{233067FD-465A-418B-AB27-1531BB3043AC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll_winmm", "proxydll_winmm\proxydll_winmm.vcxproj", "{233067FD-465A-418B-AB27-1531BB3043AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +46,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DCAA1EAA-C194-4B03-83A3-BD416E070D31}
+		SolutionGuid = {C76F2EC8-211E-4BE4-8F2F-D0FA41E2CCC5}
 	EndGlobalSection
 EndGlobal

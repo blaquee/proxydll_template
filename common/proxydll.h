@@ -60,8 +60,14 @@
     "waveOutMessage", "waveOutOpen", "waveOutPause", "waveOutPrepareHeader", "waveOutReset", \
     "waveOutRestart", "waveOutSetPitch", "waveOutSetPlaybackRate", "waveOutSetVolume", "waveOutUnprepareHeader", \
     "waveOutWrite"
+#ifdef _X86_
+#define EXPORT_NAMES32 \
+    "NotifyCallbackData", "WOW32DriverCallback", "WOW32ResolveMultiMediaHandle", "aux32Message", "joy32Message", \
+    "mci32Message", "mid32Message", "mod32Message", "mxd32Message", "tid32Message", \
+    "wid32Message", "wod32Message"
+#endif
 #endif
 
-BOOL proxy_dll_init(BOOL b_resolve_all_procs);
-FARPROC resolve_export_proc(SIZE_T index);
-BOOL proxy_dll_free(void);
+BOOL real_dll_init(void);
+BOOL real_dll_free(void);
+FARPROC resolve_export_proc(size_t index);
