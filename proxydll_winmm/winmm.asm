@@ -29,37 +29,37 @@ endif
 export endp
 endm
 
-M_EXPORT_PROC WINMM_2, 0 ; alias: PlaySoundA
-M_EXPORT_PROC mciExecute, 1
-M_EXPORT_PROC CloseDriver, 2
-M_EXPORT_PROC DefDriverProc, 3
-M_EXPORT_PROC DriverCallback, 4
-M_EXPORT_PROC DrvGetModuleHandle, 5
-M_EXPORT_PROC GetDriverModuleHandle, 6
-M_EXPORT_PROC OpenDriver, 7
-M_EXPORT_PROC PlaySound, 8 ; alias: PlaySoundA
-M_EXPORT_PROC PlaySoundA, 9
-M_EXPORT_PROC PlaySoundW, 10
-M_EXPORT_PROC SendDriverMessage, 11
-M_EXPORT_PROC WOWAppExit, 12
-M_EXPORT_PROC auxGetDevCapsA, 13
-M_EXPORT_PROC auxGetDevCapsW, 14
-M_EXPORT_PROC auxGetNumDevs, 15
-M_EXPORT_PROC auxGetVolume, 16
-M_EXPORT_PROC auxOutMessage, 17
-M_EXPORT_PROC auxSetVolume, 18
-M_EXPORT_PROC joyConfigChanged, 19
-M_EXPORT_PROC joyGetDevCapsA, 20
-M_EXPORT_PROC joyGetDevCapsW, 21
-M_EXPORT_PROC joyGetNumDevs, 22
-M_EXPORT_PROC joyGetPos, 23
-M_EXPORT_PROC joyGetPosEx, 24
-M_EXPORT_PROC joyGetThreshold, 25
-M_EXPORT_PROC joyReleaseCapture, 26
-M_EXPORT_PROC joySetCapture, 27
-M_EXPORT_PROC joySetThreshold, 28
-M_EXPORT_PROC mciDriverNotify, 29
-M_EXPORT_PROC mciDriverYield, 30
+M_EXPORT_PROC WINMM_2, 0
+M_EXPORT_PROC CloseDriver, 1
+M_EXPORT_PROC DefDriverProc, 2
+M_EXPORT_PROC DriverCallback, 3
+M_EXPORT_PROC DrvGetModuleHandle, 4
+M_EXPORT_PROC GetDriverModuleHandle, 5
+M_EXPORT_PROC OpenDriver, 6
+M_EXPORT_PROC PlaySound, 7
+M_EXPORT_PROC PlaySoundA, 8
+M_EXPORT_PROC PlaySoundW, 9
+M_EXPORT_PROC SendDriverMessage, 10
+M_EXPORT_PROC WOWAppExit, 11
+M_EXPORT_PROC auxGetDevCapsA, 12
+M_EXPORT_PROC auxGetDevCapsW, 13
+M_EXPORT_PROC auxGetNumDevs, 14
+M_EXPORT_PROC auxGetVolume, 15
+M_EXPORT_PROC auxOutMessage, 16
+M_EXPORT_PROC auxSetVolume, 17
+M_EXPORT_PROC joyConfigChanged, 18
+M_EXPORT_PROC joyGetDevCapsA, 19
+M_EXPORT_PROC joyGetDevCapsW, 20
+M_EXPORT_PROC joyGetNumDevs, 21
+M_EXPORT_PROC joyGetPos, 22
+M_EXPORT_PROC joyGetPosEx, 23
+M_EXPORT_PROC joyGetThreshold, 24
+M_EXPORT_PROC joyReleaseCapture, 25
+M_EXPORT_PROC joySetCapture, 26
+M_EXPORT_PROC joySetThreshold, 27
+M_EXPORT_PROC mciDriverNotify, 28
+M_EXPORT_PROC mciDriverYield, 29
+M_EXPORT_PROC mciExecute, 30
 M_EXPORT_PROC mciFreeCommandResource, 31
 M_EXPORT_PROC mciGetCreatorTask, 32
 M_EXPORT_PROC mciGetDeviceIDA, 33
@@ -175,8 +175,8 @@ M_EXPORT_PROC waveInAddBuffer, 142
 M_EXPORT_PROC waveInClose, 143
 M_EXPORT_PROC waveInGetDevCapsA, 144
 M_EXPORT_PROC waveInGetDevCapsW, 145
-M_EXPORT_PROC waveInGetErrorTextA, 146  ; alias: waveOutGetErrorTextA
-M_EXPORT_PROC waveInGetErrorTextW, 147  ; alias: waveOutGetErrorTextW
+M_EXPORT_PROC waveInGetErrorTextA, 146
+M_EXPORT_PROC waveInGetErrorTextW, 147
 M_EXPORT_PROC waveInGetID, 148
 M_EXPORT_PROC waveInGetNumDevs, 149
 M_EXPORT_PROC waveInGetPosition, 150
@@ -191,8 +191,8 @@ M_EXPORT_PROC waveOutBreakLoop, 158
 M_EXPORT_PROC waveOutClose, 159
 M_EXPORT_PROC waveOutGetDevCapsA, 160
 M_EXPORT_PROC waveOutGetDevCapsW, 161
-M_EXPORT_PROC waveOutGetErrorTextA, 162 ; alias: waveInGetErrorTextA
-M_EXPORT_PROC waveOutGetErrorTextW, 163 ; alias: waveInGetErrorTextW
+M_EXPORT_PROC waveOutGetErrorTextA, 162
+M_EXPORT_PROC waveOutGetErrorTextW, 163
 M_EXPORT_PROC waveOutGetID, 164
 M_EXPORT_PROC waveOutGetNumDevs, 165
 M_EXPORT_PROC waveOutGetPitch, 166

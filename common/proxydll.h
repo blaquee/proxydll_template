@@ -21,13 +21,13 @@
 #elif defined(PROXYDLL_WINMM_EXPORTS)
 #define DLL_FNAME "\\winmm.dll"
 #define EXPORT_NAMES \
-    MAKEINTRESOURCEA(2), "mciExecute", "CloseDriver", "DefDriverProc", "DriverCallback", \
-    "DrvGetModuleHandle", "GetDriverModuleHandle", "OpenDriver", "PlaySound", "PlaySoundA", \
-    "PlaySoundW", "SendDriverMessage", "WOWAppExit", "auxGetDevCapsA", "auxGetDevCapsW", \
-    "auxGetNumDevs", "auxGetVolume", "auxOutMessage", "auxSetVolume", "joyConfigChanged", \
-    "joyGetDevCapsA", "joyGetDevCapsW", "joyGetNumDevs", "joyGetPos", "joyGetPosEx", \
-    "joyGetThreshold", "joyReleaseCapture", "joySetCapture", "joySetThreshold", "mciDriverNotify", \
-    "mciDriverYield",  "mciFreeCommandResource", "mciGetCreatorTask", "mciGetDeviceIDA", "mciGetDeviceIDFromElementIDA", \
+    MAKEINTRESOURCEA(2), "CloseDriver", "DefDriverProc", "DriverCallback", "DrvGetModuleHandle", \
+    "GetDriverModuleHandle", "OpenDriver", "PlaySound", "PlaySoundA", "PlaySoundW", \
+    "SendDriverMessage", "WOWAppExit", "auxGetDevCapsA", "auxGetDevCapsW", "auxGetNumDevs", \
+    "auxGetVolume", "auxOutMessage", "auxSetVolume", "joyConfigChanged", "joyGetDevCapsA", \
+    "joyGetDevCapsW", "joyGetNumDevs", "joyGetPos", "joyGetPosEx", "joyGetThreshold", \
+    "joyReleaseCapture", "joySetCapture", "joySetThreshold", "mciDriverNotify", "mciDriverYield", \
+    "mciExecute", "mciFreeCommandResource", "mciGetCreatorTask", "mciGetDeviceIDA", "mciGetDeviceIDFromElementIDA", \
     "mciGetDeviceIDFromElementIDW", "mciGetDeviceIDW", "mciGetDriverData", "mciGetErrorStringA", "mciGetErrorStringW", \
     "mciGetYieldProc", "mciLoadCommandResource", "mciSendCommandA", "mciSendCommandW", "mciSendStringA", \
     "mciSendStringW", "mciSetDriverData", "mciSetYieldProc", "midiConnect", "midiDisconnect", \
