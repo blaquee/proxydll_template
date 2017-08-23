@@ -17,12 +17,24 @@ ifndef x64
     jmp dword ptr eax
 else
     push rcx
+    push rdx
+    push r8
+    push r9
+    push r10
+    push r11
+    sub rsp, 28h
 if index eq 0
     xor rcx, rcx
 else
     mov rcx, index
 endif
     call resolve_export_proc
+    add rsp, 28h
+    pop r11
+    pop r10
+    pop r8
+    pop r9
+    pop rdx
     pop rcx
     jmp qword ptr rax
 endif
