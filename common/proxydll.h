@@ -12,18 +12,16 @@
     "CryptSetKeyParam", "CryptSetProvParam", "CryptSetProviderA", "CryptSetProviderExA", "CryptSetProviderExW", \
     "CryptSetProviderW", "CryptSignHashA", "CryptSignHashW", "CryptVerifySignatureA", "CryptVerifySignatureW", \
     "SystemFunction035"
-#endif
-#ifdef PROXYDLL_VERSION_EXPORTS
+#elif defined(PROXYDLL_VERSION_EXPORTS)
 #define DLL_FNAME "\\version.dll"
 #define EXPORT_NAMES \
     "GetFileVersionInfoA", "GetFileVersionInfoByHandle", "GetFileVersionInfoExW", "GetFileVersionInfoSizeA", "GetFileVersionInfoSizeExW", \
     "GetFileVersionInfoSizeW", "GetFileVersionInfoW", "VerFindFileA", "VerFindFileW", "VerInstallFileA", \
     "VerInstallFileW", "VerLanguageNameA", "VerLanguageNameW", "VerQueryValueA", "VerQueryValueW"
-#endif
-#ifdef PROXYDLL_WINMM_EXPORTS
+#elif defined(PROXYDLL_WINMM_EXPORTS)
 #define DLL_FNAME "\\winmm.dll"
 #define EXPORT_NAMES \
-    (LPCSTR)2, "mciExecute", "CloseDriver", "DefDriverProc", "DriverCallback", \
+    MAKEINTRESOURCEA(2), "mciExecute", "CloseDriver", "DefDriverProc", "DriverCallback", \
     "DrvGetModuleHandle", "GetDriverModuleHandle", "OpenDriver", "PlaySound", "PlaySoundA", \
     "PlaySoundW", "SendDriverMessage", "WOWAppExit", "auxGetDevCapsA", "auxGetDevCapsW", \
     "auxGetNumDevs", "auxGetVolume", "auxOutMessage", "auxSetVolume", "joyConfigChanged", \
