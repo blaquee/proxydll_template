@@ -32,8 +32,8 @@ endif
     add rsp, 28h
     pop r11
     pop r10
-    pop r8
     pop r9
+    pop r8
     pop rdx
     pop rcx
     jmp qword ptr rax
